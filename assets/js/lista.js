@@ -30,6 +30,28 @@ function listarAlunos() {
   }
 }
 
+function excluir() {
+    const nomeExclusao = document.getElementById('excluir').value;
+  
+    let index = alunos.indexOf(nomeExclusao);
+  
+    if (index === -1) {
+      alert("Aluno não encontrado.");
+      return;
+    }
+  
+    // Exclui o aluno e a nota correspondente
+    alunos.splice(index, 1);
+    notas.splice(index, 1);
+  
+    console.log(`Aluno(a) ${nomeExclusao} excluído(a).`);
+  
+    // Exibir novamente a lista de alunos
+    listarAlunos();
+    somar();
+}
+  
+
 function somar() {
   let resultado = 0; // Inicializa resultado com 0
   let media = 0;
@@ -38,7 +60,11 @@ function somar() {
   }
   console.log(`Soma das notas: ${resultado}`);
   media = resultado / notas.length;
-  console.log(`Média das notas: ${media}`)
+  if(isNaN(media)){
+    console.log('Falha ao calcular média!')
+  }else{
+    console.log(`Média das notas: ${media}`)
+  }
 }
 
 // Exibir a lista de alunos e notas

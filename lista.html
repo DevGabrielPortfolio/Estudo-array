@@ -9,12 +9,16 @@
 <body>
     <script src="./assets/js/lista.js" defer></script>
 
-    <form>
-        <input type="text" id="nome" name="nome" class="nome" placeholder="Nome" required />
-        <input type="number" id="nota" name="nota" class="nota" placeholder="Nota" required />
+    <input type="text" id="nome" name="nome" class="nome" placeholder="Nome" required />
+    <input type="number" id="nota" name="nota" class="nota" placeholder="Nota" required />
 
-        <button type="button" onclick="adicionarAluno()">Adicionar</button>
-    </form>
+    <button type="button" onclick="adicionarAluno()">Adicionar</button>
+
+    <br>
+    <br>
+    
+    <input type="text" name="exluir" id="excluir" placeholder="Nome a ser excluido">
+    <button type="button" onclick="excluir()">Excluir Cadastro</button>
 
 </body>
 </html>
