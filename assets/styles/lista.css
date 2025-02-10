@@ -1,0 +1,11 @@
+button{
+    margin-left: 10px;
+}
+
+ul{
+    list-style-image: url('../img/listaIcon.png');
+}
+
+ul > li{
+    margin-top: 10px;
+}
